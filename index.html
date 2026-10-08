@@ -1,0 +1,653 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Huey · Data Scientist &amp; ML Engineer</title>
+  <meta name="description" content="Portfolio of Huey, a Master's degree graduate with an M.S. in Applied Statistics and a B.A. in Economics. Projects include an ultra-processed food scanner, a crypto topic-modeling thesis and California public-health dashboards.">
+  <meta name="author" content="Huey">
+  <meta name="theme-color" content="#0a0a0b" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#faf8f5" media="(prefers-color-scheme: light)">
+  <link rel="canonical" href="https://tiqfds.github.io/portfolio-website/">
+
+  <!-- Open Graph / social -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Huey · Portfolio">
+  <meta property="og:title" content="Huey · Data Scientist &amp; ML Engineer">
+  <meta property="og:description" content="M.S. in Applied Statistics and B.A. in Economics. I like problems that run end to end: pulling the data in, cleaning it, choosing the right model, and putting the answer in front of people who need it.">
+  <meta property="og:url" content="https://tiqfds.github.io/portfolio-website/">
+  <meta property="og:image" content="https://tiqfds.github.io/portfolio-website/assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Huey, Data Scientist and ML Engineer portfolio">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Huey · Data Scientist &amp; ML Engineer">
+  <meta name="twitter:description" content="M.S. in Applied Statistics and B.A. in Economics. I like problems that run end to end: pulling the data in, cleaning it, choosing the right model, and putting the answer in front of people who need it.">
+  <meta name="twitter:image" content="https://tiqfds.github.io/portfolio-website/assets/img/og-image.png">
+
+  <link rel="icon" href="assets/img/favicon.ico?v=2" sizes="any">
+  <link rel="icon" href="assets/img/favicon-32.png?v=2" type="image/png" sizes="32x32">
+  <link rel="icon" href="assets/img/favicon.svg?v=2" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png?v=2">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <script>
+    /* Set theme before paint to avoid a flash */
+    (function () {
+      var d = document.documentElement;
+      d.classList.add('js');
+      try {
+        var t = localStorage.getItem('theme');
+        if (!t) t = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+        d.setAttribute('data-theme', t);
+      } catch (e) {}
+    })();
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Huey",
+    "jobTitle": "Data Scientist",
+    "description": "Master's degree graduate with an M.S. in Applied Statistics and a B.A. in Economics who likes problems that run end to end.",
+    "email": "mailto:huydn07@gmail.com",
+    "url": "https://tiqfds.github.io/portfolio-website/",
+    "alumniOf": [
+      {"@type": "CollegeOrUniversity", "name": "California State University, Long Beach"},
+      {"@type": "CollegeOrUniversity", "name": "University of California, Irvine"}
+    ],
+    "sameAs": ["https://github.com/tiqfds", "https://www.linkedin.com/in/dyuh/", "https://medium.com/@_qfds"]
+  }
+  </script>
+</head>
+<body>
+  <!-- Icon sprite -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <symbol id="i-github" viewBox="0 0 24 24"><path fill="currentColor" d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.53-1.33-1.28-1.69-1.28-1.69-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.68 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.41-2.69 5.38-5.26 5.67.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5Z"/></symbol>
+    <symbol id="i-linkedin" viewBox="0 0 24 24"><path fill="currentColor" d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.07 2.07 0 1 1 0-4.13 2.07 2.07 0 0 1 0 4.13ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0Z"/></symbol>
+    <symbol id="i-medium" viewBox="0 0 24 24"><path fill="currentColor" d="M13.54 12a6.8 6.8 0 0 1-6.77 6.82A6.8 6.8 0 0 1 0 12a6.8 6.8 0 0 1 6.77-6.82A6.8 6.8 0 0 1 13.54 12Zm7.42 0c0 3.54-1.51 6.42-3.38 6.42-1.87 0-3.39-2.88-3.39-6.42s1.52-6.42 3.39-6.42 3.38 2.88 3.38 6.42ZM24 12c0 3.17-.53 5.75-1.19 5.75-.66 0-1.19-2.58-1.19-5.75s.53-5.75 1.19-5.75C23.47 6.25 24 8.83 24 12Z"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M4 5h16a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1Zm-1 1 9 7 9-7"/></symbol>
+    <symbol id="i-sun" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4.2"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></g></symbol>
+    <symbol id="i-moon" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M20.5 14.5A8.5 8.5 0 1 1 9.5 3.5a7 7 0 0 0 11 11Z"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14m-6-6 6 6-6 6"/></symbol>
+    <symbol id="i-ext" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M6 6l12 12M18 6 6 18"/></symbol>
+    <symbol id="i-copy" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v1"/></g></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></g></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M4 7h16M4 12h16M4 17h16"/></symbol>
+    <symbol id="i-doc" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M14 3H6a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V8l-5-5Z"/><path d="M14 3v5h5M9 13h6M9 17h6"/></g></symbol>
+  </svg>
+
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="scroll-progress" aria-hidden="true"><span></span></div>
+
+  <header class="nav" id="top-nav">
+    <div class="nav__inner container">
+      <a class="brand" href="#home" aria-label="Huey, back to top">
+        <span class="brand__mark" aria-hidden="true">H</span>
+        <span class="brand__name">Huey</span>
+      </a>
+      <nav aria-label="Primary">
+        <ul class="nav__links" id="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="nav__actions">
+        <button class="icon-btn theme-toggle" type="button" id="theme-toggle" aria-label="Switch to light theme">
+          <svg class="i-sun" aria-hidden="true"><use href="#i-sun"/></svg>
+          <svg class="i-moon" aria-hidden="true"><use href="#i-moon"/></svg>
+        </button>
+        <a class="btn btn--small btn--primary nav__cta" href="mailto:huydn07@gmail.com">Let's talk</a>
+        <button class="icon-btn nav__burger" type="button" id="nav-burger" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">
+          <svg aria-hidden="true"><use href="#i-menu"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ================= HERO ================= -->
+    <section class="hero" id="home" aria-labelledby="hero-title">
+      <canvas class="hero__canvas" id="net-canvas" aria-hidden="true"></canvas>
+      <div class="hero__glow" aria-hidden="true"></div>
+      <div class="container hero__grid">
+        <div class="hero__copy">
+          <p class="hero__eyebrow"><span class="pulse-dot" aria-hidden="true"></span> Open to data science, ML &amp; AI roles</p>
+          <h1 class="hero__title" id="hero-title">
+            <span class="hero__hi">Hi, I'm</span>
+            <span class="hero__name">Huey<span class="hero__dot" aria-hidden="true">.</span></span>
+          </h1>
+          <ul class="hero__creds" aria-label="Degrees">
+            <li><span class="hero__creds-k">M.S.</span><span class="hero__creds-v">Applied Statistics<small>CSU Long Beach</small></span></li>
+            <li><span class="hero__creds-k">B.A.</span><span class="hero__creds-v">Economics<small>UC Irvine</small></span></li>
+          </ul>
+          <div class="hero__cta">
+            <a class="btn btn--primary" href="#projects">See my work <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+            <a class="btn btn--ghost" href="#contact">Get in touch</a>
+            <ul class="socials" aria-label="Profiles">
+              <li><a href="https://github.com/tiqfds" target="_blank" rel="noopener" aria-label="GitHub (opens in a new tab)"><svg aria-hidden="true"><use href="#i-github"/></svg></a></li>
+              <li><a href="https://www.linkedin.com/in/dyuh/" target="_blank" rel="noopener" aria-label="LinkedIn (opens in a new tab)"><svg aria-hidden="true"><use href="#i-linkedin"/></svg></a></li>
+              <li><a href="https://medium.com/@_qfds" target="_blank" rel="noopener" aria-label="Medium (opens in a new tab)"><svg aria-hidden="true"><use href="#i-medium"/></svg></a></li>
+              <li><a href="mailto:huydn07@gmail.com" aria-label="Email huydn07@gmail.com"><svg aria-hidden="true"><use href="#i-mail"/></svg></a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="hero__visual">
+          <figure class="code-card tilt" aria-label="A playful Python notebook cell summarizing Huey's profile">
+            <div class="code-card__bar" aria-hidden="true">
+              <span></span><span></span><span></span>
+              <em>profile.ipynb</em>
+              <i class="code-card__kernel">Python 3</i>
+            </div>
+            <div class="code-card__cell">
+              <span class="code-card__gutter" aria-hidden="true">In [1]:</span>
+<pre class="code-card__body"><code><span class="c-k">from</span> huey <span class="c-k">import</span> Profile
+
+huey = <span class="c-f">Profile</span>(
+    degree=<span class="c-s">"M.S. Applied Statistics"</span>,
+    school=<span class="c-s">"CSU Long Beach"</span>,
+    stack=[<span class="c-s">"Python"</span>, <span class="c-s">"R"</span>, <span class="c-s">"SQL"</span>, <span class="c-s">"Tableau"</span>],
+)
+huey.<span class="c-f">scan</span>(<span class="c-s">"pasta_sauce.jpg"</span>)</code></pre>
+            </div>
+            <div class="code-card__cell code-card__cell--out">
+              <span class="code-card__gutter" aria-hidden="true">Out[1]:</span>
+              <p class="code-card__out"><span class="code-card__nova" aria-hidden="true">3</span><span id="code-out">NOVA Group 3: Processed foods</span></p>
+            </div>
+          </figure>
+          <button type="button" class="hero__teaser" data-modal="modal-upf">
+            <img src="assets/img/upf-demo-crop-poster.jpg" alt="" width="460" height="380" decoding="async">
+            <span class="hero__teaser-text">
+              <span class="hero__teaser-k">Featured project</span>
+              <b>Ultra-Processed Food Scanner</b>
+              <span class="hero__teaser-s">Photo &rarr; Qwen3-VL &rarr; NOVA group</span>
+            </span>
+            <svg class="hero__teaser-arrow" aria-hidden="true"><use href="#i-arrow"/></svg>
+          </button>
+        </div>
+      </div>
+
+      <div class="marquee" role="region" aria-label="Tools I work with">
+        <ul class="marquee__track">
+          <li>Python</li><li>R</li><li>SQL</li><li>PostgreSQL</li><li>Tableau</li><li>XGBoost</li><li>Neural networks</li><li>Random forest</li><li>Topic modeling</li><li>RAPIDS cuML</li><li>Qwen3-VL</li><li>Ollama</li><li>Streamlit</li><li>Expo</li><li>Google Cloud Platform</li>
+        </ul>
+        <ul class="marquee__track" aria-hidden="true">
+          <li>Python</li><li>R</li><li>SQL</li><li>PostgreSQL</li><li>Tableau</li><li>XGBoost</li><li>Neural networks</li><li>Random forest</li><li>Topic modeling</li><li>RAPIDS cuML</li><li>Qwen3-VL</li><li>Ollama</li><li>Streamlit</li><li>Expo</li><li>Google Cloud Platform</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ================= ABOUT ================= -->
+    <section class="section" id="about" aria-labelledby="about-title">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="eyebrow"><span class="eyebrow__num">01</span> About</p>
+          <h2 class="section__title" id="about-title">Statistics first, <span class="grad">built to ship.</span></h2>
+        </header>
+        <div class="about__grid">
+          <div class="about__text reveal">
+            <p>
+              I'm a Master's degree graduate with an <strong>M.S. in Applied Statistics</strong> and a <strong>B.A. in Economics</strong>.
+              I like problems that run end to end: pulling the data in, cleaning it, choosing the right model, and putting the answer
+              in front of people who need it.
+            </p>
+            <div class="pillars">
+              <div class="pillar">
+                <span class="pillar__icon" aria-hidden="true">∑</span>
+                <h3>Statistical modeling</h3>
+                <p>Regression, inference, experimental design, time series, association testing.</p>
+              </div>
+              <div class="pillar">
+                <span class="pillar__icon" aria-hidden="true">⌬</span>
+                <h3>Machine learning &amp; AI</h3>
+                <p>XGBoost, neural networks, random forests, topic models, vision-language models.</p>
+              </div>
+              <div class="pillar">
+                <span class="pillar__icon" aria-hidden="true">◧</span>
+                <h3>Data products</h3>
+                <p>PostgreSQL pipelines, Tableau dashboards, Streamlit &amp; Expo apps, GCP deployment.</p>
+              </div>
+            </div>
+          </div>
+
+          <aside class="edu reveal" aria-label="Education">
+            <article class="edu__card spotlight">
+              <p class="edu__date">08/2024 – 08/2026</p>
+              <h3>M.S. in Applied Statistics</h3>
+              <p class="edu__school">California State University, Long Beach</p>
+              <p class="edu__gpa"><span>GPA</span> 3.55</p>
+              <ul class="chips chips--sm" aria-label="Coursework">
+                <li>Statistical Consulting</li><li>Regression Analysis</li><li>Statistical Inference</li>
+                <li>Experimental Design</li><li>Data Mining</li><li>Time Series Analysis</li>
+              </ul>
+            </article>
+            <article class="edu__card spotlight">
+              <p class="edu__date">08/2019 – 06/2021</p>
+              <h3>B.A. in Economics</h3>
+              <p class="edu__school">University of California, Irvine</p>
+            </article>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= PROJECTS ================= -->
+    <section class="section" id="projects" aria-labelledby="projects-title">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="eyebrow"><span class="eyebrow__num">02</span> Projects</p>
+          <h2 class="section__title" id="projects-title">Projects I've <span class="grad">built.</span></h2>
+          <p class="section__sub">Click any project for the full story: the problem, the method, and the results.</p>
+        </header>
+
+        <!-- Featured -->
+        <article class="featured reveal spotlight" aria-labelledby="upf-title">
+          <div class="featured__media">
+            <div class="browser">
+              <div class="browser__bar" aria-hidden="true"><span></span><span></span><span></span><em>Check a food label</em></div>
+              <picture>
+                <source srcset="assets/img/upf-demo-crop-poster.jpg" media="(prefers-reduced-motion: reduce)">
+                <img src="assets/img/upf-demo-crop.gif" width="460" height="380" loading="lazy" decoding="async"
+                     alt="Demo of the UPF scanner web app: a photo of a pasta sauce jar's ingredient label is uploaded, and the result card shows Group 3: Processed foods with the parsed ingredients (Italian whole peeled tomatoes, olive oil, onions, salt, garlic, basil, black pepper, oregano).">
+              </picture>
+            </div>
+            <span class="nova-badge" aria-hidden="true"><b>NOVA 3</b> Processed foods</span>
+          </div>
+          <div class="featured__body">
+            <p class="featured__kicker"><span class="tag tag--hot">Featured</span> AI app · Computer vision · 2026</p>
+            <h3 class="featured__title" id="upf-title">Ultra-Processed Food Scanner</h3>
+            <p class="featured__desc">
+              Snap a photo of an ingredient list and get its <strong>NOVA group (1–4)</strong>. A vision-language model
+              (<strong>Qwen3-VL via Ollama</strong>) reads the label, rule-based logic assigns the group, and uncertain scans
+              go to human review. I built the scanner in Python with PostgreSQL and an Expo mobile app, plus a
+              <strong>Streamlit web app</strong> validated with unit tests.
+            </p>
+            <ol class="pipeline" aria-label="How a scan works">
+              <li><span class="pipeline__n">1</span> Photo of label</li>
+              <li><span class="pipeline__n">2</span> Qwen3-VL reads it</li>
+              <li><span class="pipeline__n">3</span> Rules assign NOVA</li>
+              <li><span class="pipeline__n">4</span> Review if unsure</li>
+            </ol>
+            <ul class="chips" aria-label="Tech used">
+              <li>Python</li><li>PostgreSQL</li><li>Qwen3-VL</li><li>Ollama</li><li>Streamlit</li><li>Expo</li><li>Unit tests</li>
+            </ul>
+            <div class="featured__actions">
+              <button class="btn btn--primary" type="button" data-modal="modal-upf">Case study <svg aria-hidden="true"><use href="#i-arrow"/></svg></button>
+              <a class="btn btn--ghost" href="https://github.com/tiqfds/upf-scanner-web" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-github"/></svg> View code</a>
+            </div>
+          </div>
+        </article>
+
+        <div class="proj-grid">
+          <!-- Thesis -->
+          <article class="proj reveal spotlight tilt" aria-labelledby="thesis-title">
+            <div class="proj__viz proj__viz--funnel" aria-hidden="true">
+              <div class="funnel">
+                <div class="funnel__row"><span class="funnel__bar" style="--w:100%"></span><span class="funnel__lbl"><b>189,000+</b> comments collected</span></div>
+                <div class="funnel__row"><span class="funnel__bar funnel__bar--b" style="--w:61%"></span><span class="funnel__lbl"><b>~115,000</b> clean corpus</span></div>
+              </div>
+              <div class="events">
+                <span class="events__models">4 topic models compared</span>
+                <span>Nov 2022 · FTX collapse</span><span>2024 · Mining-cost debates</span>
+              </div>
+            </div>
+            <div class="proj__body">
+              <p class="proj__meta">NLP · Topic modeling · 06/2025 – 07/2026</p>
+              <h3 id="thesis-title">Master's Thesis: Five Years of Crypto Discourse</h3>
+              <p>A YouTube Data API pipeline into PostgreSQL, then four topic-modeling methods compared in six-month windows
+                with GPU acceleration (RAPIDS cuML), detecting shifts tied to real events.</p>
+              <ul class="chips chips--sm" aria-label="Tech used"><li>YouTube Data API</li><li>PostgreSQL</li><li>Topic modeling</li><li>RAPIDS cuML</li><li>GPU</li></ul>
+              <div class="proj__actions">
+                <button class="btn btn--small btn--primary" type="button" data-modal="modal-thesis">Details <svg aria-hidden="true"><use href="#i-arrow"/></svg></button>
+                <a class="btn btn--small btn--ghost" href="https://www.proquest.com/docview/3391146611" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-doc"/></svg> ProQuest</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- CA Health -->
+          <article class="proj reveal spotlight tilt" aria-labelledby="health-title">
+            <div class="proj__viz proj__viz--gauge" aria-hidden="true">
+              <div class="gauge" style="--p:91">
+                <svg viewBox="0 0 120 120"><defs><linearGradient id="gauge-grad" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff5a1f"/><stop offset="1" stop-color="#ffb84d"/></linearGradient></defs><circle class="gauge__track" cx="60" cy="60" r="50"/><circle class="gauge__fill" cx="60" cy="60" r="50" pathLength="100"/></svg>
+                <div class="gauge__txt"><b><span class="count" data-to="91">91</span>%</b><small>P(poor health)</small></div>
+              </div>
+              <div class="gauge__side">
+                <p><b>23</b> risk factors screened</p>
+                <p class="gauge__arrow">↓</p>
+                <p><b>14+</b> bad physical health days / month</p>
+              </div>
+            </div>
+            <div class="proj__body">
+              <p class="proj__meta">Statistical consulting · Tableau · 01/2026 – 05/2026</p>
+              <h3 id="health-title">Examining Poor Health Across California</h3>
+              <p>Lead Tableau developer on a 3-person team advising the Long Beach Dept. of Health &amp; Human Services,
+                turning 2022 CDC BRFSS data into a single, actionable screening threshold.</p>
+              <ul class="chips chips--sm" aria-label="Tech used"><li>Tableau</li><li>R</li><li>Logistic regression</li><li>Random forest</li><li>CDC BRFSS</li></ul>
+              <div class="proj__actions">
+                <button class="btn btn--small btn--primary" type="button" data-modal="modal-health">Details <svg aria-hidden="true"><use href="#i-arrow"/></svg></button>
+                <a class="btn btn--small btn--ghost" href="https://docs.google.com/document/d/1I8q15fn-xXk9cWFTrdIYIpL7CBHqxvihimIFCQ74Z0U/edit?usp=sharing" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-doc"/></svg> Report</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= EXPERIENCE ================= -->
+    <section class="section" id="experience" aria-labelledby="exp-title">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="eyebrow"><span class="eyebrow__num">03</span> Experience</p>
+          <h2 class="section__title" id="exp-title">Where I've <span class="grad">worked &amp; studied.</span></h2>
+        </header>
+
+        <div class="filter reveal" role="group" aria-label="Filter timeline">
+          <button type="button" class="filter__btn is-active" aria-pressed="true" data-filter="all">All</button>
+          <button type="button" class="filter__btn" aria-pressed="false" data-filter="work">Work</button>
+          <button type="button" class="filter__btn" aria-pressed="false" data-filter="edu">Education</button>
+        </div>
+
+        <ol class="timeline" id="timeline">
+          <li class="tl reveal" data-kind="edu">
+            <div class="tl__dot" aria-hidden="true"></div>
+            <div class="tl__card spotlight">
+              <div class="tl__top"><span class="tl__type tl__type--edu">Education</span><span class="tl__date">08/2024 – 08/2026</span></div>
+              <h3>M.S. in Applied Statistics</h3>
+              <p class="tl__org">California State University, Long Beach <span class="tl__loc"><svg aria-hidden="true"><use href="#i-pin"/></svg> Long Beach, CA</span></p>
+              <ul><li>GPA 3.55. Coursework in statistical consulting, regression, inference, experimental design, data mining and time series.</li>
+                <li>Thesis on topic modeling of cryptocurrency discourse (see Projects).</li></ul>
+            </div>
+          </li>
+          <li class="tl reveal" data-kind="work">
+            <div class="tl__dot" aria-hidden="true"></div>
+            <div class="tl__card spotlight">
+              <div class="tl__top"><span class="tl__type">Work</span><span class="tl__date">08/2025 – 12/2025</span></div>
+              <h3>Teaching Associate &amp; Instructional Student Assistant</h3>
+              <p class="tl__org">CSU Long Beach <span class="tl__loc"><svg aria-hidden="true"><use href="#i-pin"/></svg> Long Beach, CA</span></p>
+              <ul>
+                <li>Taught 3 concurrent STAT 90 (Foundations for Statistics) sections with problem-solving workshops, structured team roles and individualized feedback for <strong>70+ students</strong>.</li>
+                <li>Held bi-weekly office hours on midterm corrections, diagnosing recurring conceptual errors in statistical reasoning.</li>
+              </ul>
+            </div>
+          </li>
+          <li class="tl reveal" data-kind="work">
+            <div class="tl__dot" aria-hidden="true"></div>
+            <div class="tl__card spotlight">
+              <div class="tl__top"><span class="tl__type">Work</span><span class="tl__date">04/2022 – 10/2022</span></div>
+              <h3>Data Science Intern</h3>
+              <p class="tl__org"><a href="https://www.behaivior.com/" target="_blank" rel="noopener">Behaivior</a> <span class="tl__loc"><svg aria-hidden="true"><use href="#i-pin"/></svg> Pittsburgh, PA</span></p>
+              <ul>
+                <li>Analyzed real-time physiological and accelerometer time-series data from smartwatches in Python to model user activity patterns.</li>
+                <li>Built neural network and XGBoost models to flag relapse risk among substance users, <strong>cutting false positives by 10%</strong> and reducing unnecessary intervention costs.</li>
+                <li>Supported deployment of ML models to Google Cloud Platform, building unit test coverage to validate prediction correctness before release.</li>
+              </ul>
+            </div>
+          </li>
+          <li class="tl reveal" data-kind="work">
+            <div class="tl__dot" aria-hidden="true"></div>
+            <div class="tl__card spotlight">
+              <div class="tl__top"><span class="tl__type">Work</span><span class="tl__date">07/2021 – 01/2022</span></div>
+              <h3>Accounting &amp; Investments Intern</h3>
+              <p class="tl__org"><a href="https://livegoodinc.com/" target="_blank" rel="noopener">Live Good Inc.</a> <span class="tl__loc"><svg aria-hidden="true"><use href="#i-pin"/></svg> Irvine, CA</span></p>
+              <ul><li>Produced ad-hoc portfolio reports, summarizing holdings performance and surfacing allocation options for review.</li></ul>
+            </div>
+          </li>
+          <li class="tl reveal" data-kind="edu">
+            <div class="tl__dot" aria-hidden="true"></div>
+            <div class="tl__card spotlight">
+              <div class="tl__top"><span class="tl__type tl__type--edu">Education</span><span class="tl__date">08/2019 – 06/2021</span></div>
+              <h3>B.A. in Economics</h3>
+              <p class="tl__org">University of California, Irvine <span class="tl__loc"><svg aria-hidden="true"><use href="#i-pin"/></svg> Irvine, CA</span></p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ================= SKILLS ================= -->
+    <section class="section" id="skills" aria-labelledby="skills-title">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="eyebrow"><span class="eyebrow__num">04</span> Skills</p>
+          <h2 class="section__title" id="skills-title">The toolkit, <span class="grad">with receipts.</span></h2>
+          <p class="section__sub">Pick a skill to see exactly where I've used it.</p>
+        </header>
+
+        <div class="skills">
+          <div class="skills__groups reveal" id="skill-groups">
+            <div class="sg">
+              <h3>Languages &amp; data</h3>
+              <div class="sg__chips">
+                <button type="button" class="skill" data-skill="python">Python</button>
+                <button type="button" class="skill" data-skill="r">R</button>
+                <button type="button" class="skill" data-skill="sql">SQL / PostgreSQL</button>
+                <button type="button" class="skill" data-skill="api">YouTube Data API</button>
+                <button type="button" class="skill" data-skill="timeseries">Time-series data</button>
+              </div>
+            </div>
+            <div class="sg">
+              <h3>Machine learning &amp; AI</h3>
+              <div class="sg__chips">
+                <button type="button" class="skill" data-skill="xgboost">XGBoost</button>
+                <button type="button" class="skill" data-skill="nn">Neural networks</button>
+                <button type="button" class="skill" data-skill="rf">Random forest</button>
+                <button type="button" class="skill" data-skill="topic">Topic modeling</button>
+                <button type="button" class="skill" data-skill="vlm">Vision-language models</button>
+                <button type="button" class="skill" data-skill="ollama">Ollama / Qwen3-VL</button>
+                <button type="button" class="skill" data-skill="cuml">RAPIDS cuML (GPU)</button>
+              </div>
+            </div>
+            <div class="sg">
+              <h3>Statistics</h3>
+              <div class="sg__chips">
+                <button type="button" class="skill" data-skill="logreg">Logistic regression</button>
+                <button type="button" class="skill" data-skill="assoc">Association testing</button>
+                <button type="button" class="skill" data-skill="regression">Regression analysis</button>
+                <button type="button" class="skill" data-skill="inference">Statistical inference</button>
+                <button type="button" class="skill" data-skill="doe">Experimental design</button>
+                <button type="button" class="skill" data-skill="consult">Statistical consulting</button>
+              </div>
+            </div>
+            <div class="sg">
+              <h3>Apps, BI &amp; deployment</h3>
+              <div class="sg__chips">
+                <button type="button" class="skill" data-skill="tableau">Tableau</button>
+                <button type="button" class="skill" data-skill="streamlit">Streamlit</button>
+                <button type="button" class="skill" data-skill="expo">Expo</button>
+                <button type="button" class="skill" data-skill="gcp">Google Cloud Platform</button>
+                <button type="button" class="skill" data-skill="tests">Unit testing</button>
+                <button type="button" class="skill" data-skill="teach">Teaching &amp; communication</button>
+              </div>
+            </div>
+          </div>
+
+          <aside class="evidence reveal spotlight" aria-live="polite" aria-labelledby="ev-title">
+            <p class="evidence__kicker">Where I've used it</p>
+            <h3 class="evidence__title" id="ev-title">Python</h3>
+            <ul class="evidence__list" id="ev-list"></ul>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CONTACT ================= -->
+    <section class="section contact" id="contact" aria-labelledby="contact-title">
+      <div class="container">
+        <div class="contact__card reveal">
+          <div class="contact__glow" aria-hidden="true"></div>
+          <p class="eyebrow"><span class="eyebrow__num">05</span> Contact</p>
+          <h2 class="contact__title" id="contact-title">Let's turn your data into <span class="grad">decisions.</span></h2>
+          <p class="contact__lead">I'm looking for data scientist, data analyst, ML engineer and AI engineer roles. The fastest way to reach me is email.</p>
+          <div class="contact__email">
+            <a class="btn btn--primary btn--lg" href="mailto:huydn07@gmail.com"><svg aria-hidden="true"><use href="#i-mail"/></svg> huydn07@gmail.com</a>
+            <button class="btn btn--ghost btn--lg copy-btn" type="button" data-copy="huydn07@gmail.com"><svg aria-hidden="true"><use href="#i-copy"/></svg> <span>Copy email</span></button>
+          </div>
+          <ul class="contact__links">
+            <li><a class="link-card" href="https://github.com/tiqfds" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-github"/></svg><span><b>GitHub</b><small>@tiqfds</small></span><svg class="link-card__ext" aria-hidden="true"><use href="#i-ext"/></svg></a></li>
+            <li><a class="link-card" href="https://www.linkedin.com/in/dyuh/" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-linkedin"/></svg><span><b>LinkedIn</b><small>in/dyuh</small></span><svg class="link-card__ext" aria-hidden="true"><use href="#i-ext"/></svg></a></li>
+            <li><a class="link-card" href="https://medium.com/@_qfds" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-medium"/></svg><span><b>Medium</b><small>@_qfds</small></span><svg class="link-card__ext" aria-hidden="true"><use href="#i-ext"/></svg></a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p>© <span id="year">2026</span> Huey</p>
+      <p class="footer__built">Hand-built with HTML, CSS &amp; vanilla JS · Hosted on GitHub Pages</p>
+      <a class="footer__top" href="#home">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <!-- ================= MODALS ================= -->
+  <dialog class="modal" id="modal-upf" aria-labelledby="m-upf-title">
+    <div class="modal__inner" tabindex="-1" role="region" aria-labelledby="m-upf-title">
+      <button class="icon-btn modal__close" type="button" data-close aria-label="Close dialog"><svg aria-hidden="true"><use href="#i-close"/></svg></button>
+      <p class="modal__kicker">Featured project · 2026</p>
+      <h2 id="m-upf-title">Ultra-Processed Food Scanner</h2>
+      <p class="modal__lead">A photo of an ingredient list goes in; a <strong>NOVA group from 1 to 4</strong> comes out, along with the ingredients the model read.</p>
+
+      <figure class="modal__media">
+        <video controls muted loop playsinline preload="none" poster="assets/img/upf-demo-poster.jpg" width="800" height="450" aria-label="11-second screen recording of the scanner web app classifying a pasta sauce jar as NOVA Group 3">
+          <source src="assets/img/upf-demo.webm" type="video/webm">
+          <img src="assets/img/upf-demo.gif" alt="Demo of the scanner classifying a pasta sauce jar as NOVA Group 3: Processed foods">
+        </video>
+        <figcaption>Real demo: a pasta sauce jar comes back as <b>Group 3: Processed foods</b> with its parsed ingredient list. (11-second recording; a live scan can take about 40 seconds.)</figcaption>
+      </figure>
+
+      <div class="modal__cols">
+        <section>
+          <h3>What I built</h3>
+          <ul class="ticks">
+            <li>A mobile food-scanning app in <b>Python</b> with <b>PostgreSQL</b> and <b>Expo</b>.</li>
+            <li>A vision-language model, <b>Qwen3-VL via Ollama</b>, reads the ingredient label.</li>
+            <li><b>Rule-based logic</b> classifies the food into NOVA groups 1–4, with <b>human review</b> for uncertain scans.</li>
+            <li>A <b>Streamlit web app</b>: upload a photo, then see the NOVA classification and parsed ingredients. Validated with Python unit tests.</li>
+          </ul>
+        </section>
+        <section>
+          <h3>Design choices</h3>
+          <ul class="ticks">
+            <li>The display layer only turns the scanner's answer into a result card. It <b>never decides a group</b> itself.</li>
+            <li>Unsettled ingredients show <i>"Likely ultra-processed, being verified"</i> rather than a guess.</li>
+            <li>Unreadable photos, screenshots, cut-off lists and non-foods ask for another photo instead of showing a group.</li>
+            <li>Photos aren't saved and there's no account step. Unit tests run on sample output, without the model.</li>
+          </ul>
+        </section>
+      </div>
+
+      <div class="modal__flow" aria-label="Pipeline">
+        <span>Photo</span><i aria-hidden="true">→</i><span>Qwen3-VL (Ollama)</span><i aria-hidden="true">→</i><span>NOVA rules</span><i aria-hidden="true">→</i><span>Human review if uncertain</span><i aria-hidden="true">→</i><span>Result card</span>
+      </div>
+
+      <ul class="chips" aria-label="Tech used"><li>Python</li><li>PostgreSQL</li><li>Ollama</li><li>Qwen3-VL</li><li>Streamlit</li><li>Expo</li><li>unittest</li></ul>
+      <p class="modal__note">The public repo holds the web front end; the scanner core lives in a separate private project.</p>
+      <div class="modal__actions">
+        <a class="btn btn--primary" href="https://github.com/tiqfds/upf-scanner-web" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-github"/></svg> View the repo</a>
+        <button class="btn btn--ghost" type="button" data-close>Close</button>
+      </div>
+    </div>
+  </dialog>
+
+  <dialog class="modal" id="modal-thesis" aria-labelledby="m-thesis-title">
+    <div class="modal__inner" tabindex="-1" role="region" aria-labelledby="m-thesis-title">
+      <button class="icon-btn modal__close" type="button" data-close aria-label="Close dialog"><svg aria-hidden="true"><use href="#i-close"/></svg></button>
+      <p class="modal__kicker">Master's thesis · 06/2025 – 07/2026</p>
+      <h2 id="m-thesis-title">Topic Modeling Five Years of Crypto Discourse</h2>
+      <p class="modal__lead">How did the conversation about cryptocurrency on YouTube shift over five years, and can topic models pick up shifts tied to real-world events?</p>
+
+      <div class="kpis">
+        <div class="kpi"><b>189,000+</b><span>comments collected</span></div>
+        <div class="kpi"><b>~115,000</b><span>comments in final corpus</span></div>
+        <div class="kpi"><b>4</b><span>topic-modeling methods compared</span></div>
+        <div class="kpi"><b>5 yrs</b><span>in six-month windows</span></div>
+      </div>
+
+      <div class="modal__flow" aria-label="Pipeline">
+        <span>YouTube Data API</span><i aria-hidden="true">→</i><span>PostgreSQL</span><i aria-hidden="true">→</i><span>Preprocessing</span><i aria-hidden="true">→</i><span>4 topic models · RAPIDS cuML on GPU</span><i aria-hidden="true">→</i><span>Shifts over time</span>
+      </div>
+
+      <div class="modal__cols">
+        <section>
+          <h3>What I did</h3>
+          <ul class="ticks">
+            <li>Built a <b>YouTube Data API</b> pipeline that collected <b>189,000+</b> cryptocurrency comments, stored in <b>PostgreSQL</b>.</li>
+            <li>Retrieved and preprocessed the data into a corpus of <b>~115,000</b> comments.</li>
+            <li>Compared <b>four topic-modeling methods</b> across five years of discourse in six-month windows, with <b>GPU acceleration (RAPIDS cuML)</b>.</li>
+          </ul>
+        </section>
+        <section>
+          <h3>What it found</h3>
+          <ul class="ticks">
+            <li>Detected topic shifts tied to real-world events, including the <b>November 2022 FTX collapse</b>.</li>
+            <li>…and the <b>2024 mining-cost debates</b>.</li>
+          </ul>
+        </section>
+      </div>
+
+      <ul class="chips" aria-label="Tech used"><li>YouTube Data API</li><li>PostgreSQL</li><li>NLP</li><li>Topic modeling</li><li>RAPIDS cuML</li><li>GPU computing</li></ul>
+      <div class="modal__actions">
+        <a class="btn btn--primary" href="https://www.proquest.com/docview/3391146611" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-doc"/></svg> Read on ProQuest</a>
+        <button class="btn btn--ghost" type="button" data-close>Close</button>
+      </div>
+    </div>
+  </dialog>
+
+  <dialog class="modal" id="modal-health" aria-labelledby="m-health-title">
+    <div class="modal__inner" tabindex="-1" role="region" aria-labelledby="m-health-title">
+      <button class="icon-btn modal__close" type="button" data-close aria-label="Close dialog"><svg aria-hidden="true"><use href="#i-close"/></svg></button>
+      <p class="modal__kicker">Statistical consulting · 01/2026 – 05/2026</p>
+      <h2 id="m-health-title">Examining Poor Health Across California</h2>
+      <p class="modal__lead">Advising the <b>Long Beach Dept. of Health &amp; Human Services</b>: what's the single largest risk factor behind self-reported poor health in California?</p>
+
+      <div class="kpis">
+        <div class="kpi"><b>23</b><span>risk factors screened</span></div>
+        <div class="kpi"><b>14+</b><span>bad physical health days / month</span></div>
+        <div class="kpi"><b>91%</b><span>predicted probability of poor health</span></div>
+        <div class="kpi"><b>3</b><span>person consulting team</span></div>
+      </div>
+
+      <div class="modal__flow" aria-label="Approach">
+        <span>2022 CDC BRFSS</span><i aria-hidden="true">→</i><span>Association testing</span><i aria-hidden="true">→</i><span>Logistic regression</span><i aria-hidden="true">→</i><span>Random forest validation</span><i aria-hidden="true">→</i><span>Screening threshold</span>
+      </div>
+
+      <div class="modal__cols">
+        <section>
+          <h3>My role</h3>
+          <ul class="ticks">
+            <li><b>Lead Tableau developer</b> on a 3-person consulting team.</li>
+            <li>Built dashboards on <b>2022 CDC BRFSS</b> data to isolate the largest risk factor behind self-reported poor health.</li>
+          </ul>
+        </section>
+        <section>
+          <h3>Method &amp; result</h3>
+          <ul class="ticks">
+            <li>Screened <b>23 risk factors in R</b>: association testing, logistic regression, and random forest validation.</li>
+            <li>Converted the strongest signal into a screening threshold: <b>14+ bad physical health days per month predicted a 91% probability</b> of self-reported poor health.</li>
+          </ul>
+        </section>
+      </div>
+
+      <ul class="chips" aria-label="Tech used"><li>Tableau</li><li>R</li><li>Logistic regression</li><li>Random forest</li><li>Association testing</li><li>CDC BRFSS</li></ul>
+      <div class="modal__actions">
+        <a class="btn btn--primary" href="https://docs.google.com/document/d/1I8q15fn-xXk9cWFTrdIYIpL7CBHqxvihimIFCQ74Z0U/edit?usp=sharing" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-doc"/></svg> Read the project doc</a>
+        <button class="btn btn--ghost" type="button" data-close>Close</button>
+      </div>
+    </div>
+  </dialog>
+
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>
